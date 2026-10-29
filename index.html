@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaunchCareer</title>
+    <link rel="stylesheet"href="style.css">
+</head>
+<body>
+    <header>
+            <h1>LaunchCareer</h1>
+            <p>Your Career,Your Next Move.</p>
+    </header>
+    <main class="container">
+        <section class="welcome-section">
+    <div>
+        <p class="welcome-label">YOUR CAREER DASHBOARD</p>
+        <h2>Welcome to LaunchCareer! 👋</h2>
+        <p>Track your applications, prepare for interviews, and move closer to your dream job.</p>
+    </div>
+</section>
+<section class="dashboard-stats">
+    <div class="stat-card">
+        <p>Total Applications</p>
+        <h3 id="totalCount">0</h3>
+    </div>
+    <div class="stat-card">
+        <p>Interviews</p>
+        <h3 id="interviewCount">0</h3>
+    </div>
+    <div class="stat-card">
+        <p>Selected</p>
+        <h3 id="selectedCount">0</h3>
+    </div>
+</section>
+<div id="notification" class="notification"></div>
+        <h2>Add New Application</h2>
+        <form id="JObForm">
+            <input type="text"id="Company"placeholder="Company Name"required>
+            <input type="text"id="role"placeholder="Job Role"required>
+            <input type="Date"id="date"required>
+            <select id="status">
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Selected">Selected</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+            <button type="submit"id="SubmitBtn">Add application</button>
+        </form>
+        <h2>My Applications</h2>
+        <button type="button" id="exportBtn">Export Applications ↓</button>
+        <input type="text"id="search"Placeholder="search by company or role">
+        <div class="quick-filters">
+    <button type="button" class="quick-filter active" data-status="All">All</button>
+    <button type="button" class="quick-filter" data-status="Applied">Applied</button>
+    <button type="button" class="quick-filter" data-status="Interview">Interviews</button>
+    <button type="button" class="quick-filter" data-status="Selected">Selected</button>
+    <button type="button" class="quick-filter" data-status="Rejected">Rejected</button>
+</div>
+        <select id="filterstatus">
+            <option value="All">All status</option>
+            <option value="Applied">Applied</option>
+            <option value="Interview">Interview</option>
+            <option value="Selected">Selected</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+        <div id="Joblist"></div>
+        <p id="emptyMessage">No applications added yet.</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
